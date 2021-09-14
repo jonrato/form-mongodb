@@ -1,0 +1,272 @@
+{%load static%}
+{% load crispy_forms_tags %}
+<html>
+    
+    <head>
+        
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <title> P.D.P.T Demo</title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="manifest" href="site.webmanifest">
+            <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        
+            <!-- CSS here -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+            
+            <link rel="stylesheet" href="{% static '/assets/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/slicknav.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/flaticon.css'%}">
+            <link rel="stylesheet" href="{% static '/assets/css/progressbar_barfiller.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/gijgo.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/animated-headline.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/themify-icons.css'%}">
+            <link rel="stylesheet" href="{% static '/assets/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static '/assets/css/style.css' %}" type="text/css" />
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        
+    <div class="col-12">
+        <form method="post" enctype="multipart/form-data" class="col-12">
+            {% csrf_token %}
+            <section>
+                <h2>Dados do Trabalho</h2>
+            <div class="form-group" >
+                {{form.titulo_trabalho|as_crispy_field}}
+            </div>
+            <div class="form-group">
+                {{form.areas_intervencao|as_crispy_field}}
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.prof_coordenador|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.email_prof_coordenador|as_crispy_field}}
+                </div>
+                
+            </div>
+            <div class="form-group">
+                {{form.n_participantes}}
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.desc_det_proj|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.anexos|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.resumo_uma_pagina|as_crispy_field}}
+                </div>
+            </div>
+            <div class="form-group">
+                {{form.resumo_uma_pagina|as_crispy_field}}
+            </div>
+        </section>
+
+        <section>
+            <h2>Dados do Candidato</h2>
+            <div class="form-group">
+                {{form.nome|as_crispy_field}}
+            </div>
+            <div class="form-group">
+                {{form.fotografia_passe|as_crispy_field}}
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.morada_completa|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.cod_postal|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.localidade|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.sexo|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.nascimento|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.n_cartao_cidadao|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.n_id_fiscal|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.telefone|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.telemovel|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.email|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.escola_frequenta|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.pais|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.distrito_escola|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.ano_frequenta|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.carreira_seguir|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.passatempo|as_crispy_field}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    {{form.telemovel|as_crispy_field}}
+                </div>
+                <div class="form-group">
+                    {{form.email|as_crispy_field}}
+                </div>
+            </div>
+        </section>
+            <button type="submit" class="btn btn-primary">
+                Submeter a candidatura
+            </button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+    <footer style="background-color: #050A30;">
+        <div class="footer-wrapper section-bg2" data-background="{%static 'assets/img/gallery/footer_bg.png'%}">
+            <!-- Footer Top-->
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <div class="footer-tittle">
+                                    <div class="footer-logo mb-20">
+                                        <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Contact Info</h4>
+                                    <ul>
+                                        <li>
+                                            <p>Endreço :Ingombotas, Ilha do Cabo, 
+Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
+                                        </li>
+                                        <li><a href="#">Phone : +8880 44338899</a></li>
+                                        <li><a href="#">Email : info@pdpt.com</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Links Importantes</h4>
+                                    <ul>
+                                        <li><a href="#"> Acompanhar Projectos</a></li>
+                                        <li><a href="#">Contacte-nos</a></li>
+                                        <li><a href="#">Testemunho</a></li>
+                                        <li><a href="#">Quem somos</a></li>
+                                        <li><a href="#">Suporte</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Newsletter</h4>
+                                    <div class="footer-pera footer-pera2">
+                                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                                </div>
+                                <!-- Form -->
+                                <div class="footer-form" >
+                                    <div id="mc_embed_signup">
+                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                        method="get" class="subscribe_form relative mail_part">
+                                            <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                            class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = ' Email Address '">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit"
+                                                class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
+                                            </div>
+                                            <div class="mt-10 info"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-bottom -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-xl-10 col-lg-9 ">
+                                <div class="footer-copy-right">
+                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Este um site modelo  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://muximatic.com" target="_blank">Muximatic</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3">
+                                <div class="footer-social f-right">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-behance"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>

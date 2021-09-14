@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div>
+            <h1>Dados do Trabalho</h1>
+            <form class="offset-1 col-10" method="POST" action="/">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Título do trabalho</label>
+                    <input type="text" class="form-control" name="title_trab" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Áreas de intervenção</label>
+                    <select class="form-control" name="areas_intervencao" id="exampleFormControlSelect1" placeholder="Seleccionar">
+                      <option>AREA1</option>
+                      <option>AREA2</option>
+                      <option>AREA3</option>
+                      <option>AREA4</option>
+                      <option>AREA5</option>
+                    </select>
+                </div>
+
+                <div class="row">
+
+                  <div class="form-group" style="margin-right:2rem;">
+                    <label for="exampleInputEmail1">Prof. coordenador(apenas para candidaturas do ensino secundário e profissional)</label>
+                    <input type="text" name="prof_coordenador" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                  </div>   
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">E-mail Prof. coordenador</label>
+                    <input type="text" name="email_prof_coordenador" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Nr. de participantes</label>
+                    <select class="form-control" name="n_participantes" id="exampleFormControlSelect1" placeholder="Seleccionar">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                </div>
+
+                <div class="row">
+
+                    <div class="custom-file col-4">
+
+                        <input type="file" name="desc_det_proj" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Descrição detalhada do projeto (modelo)</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        <small id="emailHelp" class="form-text text-muted">.gif | .jpg | .jpeg | .png || até 1MB</small>
+                      </div>  
+  
+                    <div class="custom-file col-3 offset-1">
+                      <input type="file" name="anexos" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Anexos</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                      <small id="emailHelp" class="form-text text-muted">.zip | .rar || até 10Mb</small>
+                    </div>
+
+                    <div class="custom-file col-3 offset-1">
+                        <input type="file" name="resumo" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Resumo de 1 página</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        <small id="emailHelp" class="form-text text-muted">.pdf | .doc | .docx || até 512Kb</small>
+                      </div>
+  
+                  </div>
+                    <br>
+                    <br>
+                    <br>
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Resumo do trabalho</label>
+                    <br>
+                    <label for="exampleFormControlTextarea1">(1000 caracteres incluindo espaços e parágrafos)</label>
+                    <textarea class="form-control" name="resumo_trabalho" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    <small id="emailHelp" class="form-text text-muted">caracteres disponíveis: 1000</small>
+                  </div>
+
+                
+
+                <h1>Dados do candidato</h1>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nome completo</label>
+                    <input type="text" name="nome_completo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                </div>
+
+                <div>
+                    <label>Fotografia tipo passe</label>
+                    <div class="custom-file">
+                        <input type="file" name="fotografia_posse" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                        <small id="emailHelp" class="form-text text-muted">.gif | .jpg | .jpeg | .png || até 1MB</small>
+                      </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group" style="margin-right:2rem;">
+                      <label for="exampleInputEmail1">Morada completa</label>
+                      <input type="text" name="morada_completa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>   
+  
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Código postal</label>
+                      <input type="text" name="cod_postal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+  
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Localidade</label>
+                        <input type="text" name="localidade" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+
+                    <label>Sexo</label>
+                    <br>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline1" name="sexo" class="custom-control-input" value="feminino">
+                        <label class="custom-control-label" for="customRadioInline1">Feminino</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" name="sexo" class="custom-control-input" value="masculino">
+                        <label class="custom-control-label" for="customRadioInline2">Masculino</label>
+                      </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group" style="margin-right:2rem;">
+                      <label for="exampleInputEmail1">Data de nascimento</label>
+                      <input type="text" name="nascimento" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>   
+  
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nº do Cartão de Cidadão</label>
+                      <input type="text" name="cartao_cidadao" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+  
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group" style="margin-right:2rem;">
+                      <label for="exampleInputEmail1">Nº de Identificação Fiscal</label>
+                      <input type="text" name="id_fiscal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>   
+  
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Telefone</label>
+                      <input type="text" name="telefone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+  
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group" style="margin-right:2rem;">
+                      <label for="exampleInputEmail1">Telemóvel</label>
+                      <input type="text" name="telemovel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>   
+  
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">E-mail</label>
+                      <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+  
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group" style="margin-right:2rem;">
+                      <label for="exampleInputEmail1">Nome da escola/universidade que frequenta</label>
+                      <input type="text" name="escola_universidade" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>   
+  
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">País</label>
+                        <select name="text" class="form-control" id="exampleFormControlSelect1" placeholder="Seleccionar">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+  
+                </div>
+
+                <div class="row"> 
+  
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Distrito da escola/universidade que frequenta</label>
+                        <select name="distrito_escola" class="form-control" id="exampleFormControlSelect1" placeholder="Seleccionar">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" style="margin-right:2rem;">
+                        <label for="exampleInputEmail1">Localidade da escola/universidade que frequenta</label>
+                        <input name="localidade_escola" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                      </div>
+  
+                </div>
+
+                <div class="row"> 
+  
+                    <div class="form-group" style="margin-right:2rem;">
+                        <label for="exampleInputEmail1">Ano que frequenta</label>
+                        <input type="text" name="ano" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+
+                    <div class="form-group" style="margin-right:2rem;">
+                        <label for="exampleInputEmail1">Carreira que pretende seguir</label>
+                        <input type="text" name="carreira" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+  
+                </div>
+
+                <div class="row"> 
+  
+                    <div class="form-group" style="margin-right:2rem;">
+                        <label for="exampleInputEmail1">Passatempos</label>
+                        <input type="text" name="passatempo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    </div>
+
+                    <label>Termos de privicidade</label>
+
+                    </label>
+                    <br>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" name="privacidade" required="true">
+                        <label class="custom-control-label"  for="customCheck1">Li e concordo com os termos de privacidade</label>
+                    </div>
+  
+                </div>
+
+                <button class="btn btn-primary" type="submit">Submeter a candidatura</button>
+
+
+
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
