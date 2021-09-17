@@ -102,7 +102,7 @@ def missao(request, template_name='Missao.html'):
 #End Missão
 
 #Organograma
-def organograma(request, template_name='Organograma.html'):
+def organograma(request, template_name='Organigrama.html'):
     
     return render(request, template_name)
 
@@ -127,7 +127,7 @@ def vantagens(request, template_name='vantagens.html'):
 #END Vantages
 
 #Visão
-def visao(request, template_name='visao.html'):
+def visao(request, template_name='Visao.html'):
     
     return render(request, template_name)
 #END Visão
