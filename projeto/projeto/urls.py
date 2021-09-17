@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^cadastro/', cadastro_new, name='cadastro_new'),
     url(r'^sucesso/', sucesso, name='sucess_form'),
 
-    url(r'^/', index, name='index'),
+    url(r'^$', index, name='index'),
     url(r'^about/', about, name='about'),
     url(r'^contact/', contact, name='contact'),
     url(r'^missao/', missao, name='missao'),

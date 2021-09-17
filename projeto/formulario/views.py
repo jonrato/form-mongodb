@@ -96,25 +96,38 @@ def membros_fundadores(request, template_name='membrosfundadores.html'):
 #END Membros Fundadores
 
 #Missão
-
+def missao(request, template_name='Missao.html'):
+    
+    return render(request, template_name)
 #End Missão
 
 #Organograma
+def organograma(request, template_name='Organograma.html'):
+    
+    return render(request, template_name)
 
 #END Organograma
 
 #Regulamento
-
+def regulamento(request, template_name='regulamento.html'):
+    
+    return render(request, template_name)
 #END Regulamento
 
 #Valores
-
+def valores(request, template_name='Valores.html'):
+    
+    return render(request, template_name)
 #END Valores
 
 #Vantages
-
+def vantagens(request, template_name='vantagens.html'):
+    
+    return render(request, template_name)
 #END Vantages
 
 #Visão
-
+def visao(request, template_name='visao.html'):
+    
+    return render(request, template_name)
 #END Visão
