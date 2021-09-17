@@ -11,6 +11,8 @@
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
     
         <!-- CSS here -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
         
         <link rel="stylesheet" href="{% static '/assets/css/owl.carousel.min.css' %}">
         <link rel="stylesheet" href="{% static '/assets/css/slicknav.css' %}">
@@ -32,9 +34,9 @@
 </head>
     <body>
         
-        <div class="card col-12" style="width: 18rem;margin-left: 40%;margin-top: 10%;">
-            <div class="card-body">
-            <div class="card-body" style="width: 13rem;color:green">
+        <div class="card col-12" style="width: 100%;">
+            <div class="card-body text-center" style="margin-top: 10%;margin-bottom: 10%;">
+            <div class="card-body offset-5" style="width: 13rem;color:green;;">
                 <i class="fas fa-check fa-10x"></i>
             </div>
               <h5 class="card-title">Cadastro Submetido Com Sucesso</h5>
@@ -42,9 +44,12 @@
               <a href="#" class="btn btn-primary">Voltar à Página Inicial</a>
             </div>
           </div>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
     <footer style="background-color: #050A30;">
-        <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
+        <div class="footer-wrapper section-bg2" data-background="{%static 'assets/img/gallery/footer_bg.png'%}">
             <!-- Footer Top-->
             <div class="footer-area footer-padding">
                 <div class="container">
@@ -54,7 +59,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                        <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -125,9 +130,9 @@ Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                     <div class="footer-border">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-10 col-lg-9 ">
-                                <div class="footer-copy-right">
+                                <div class="footer-copy-right text-center">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Este um site modelo  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://muximatic.com" target="_blank">Muximatic</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Jonatas Ferreira
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>

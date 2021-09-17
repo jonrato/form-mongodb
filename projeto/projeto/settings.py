@@ -28,6 +28,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#SEND EMAIL
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'workdevangola@gmail.com'
+EMAIL_HOST_PASSWORD='zddmyqaxzefwuout'
+EMAIL_PORT = 587
+APPLICATION_EMAIL = 'PDPT<workdevangola@gmail.com>'
+DEFAULT_FROM_EMAIL = 'PDPT<workdevangola@gmail.com>'
+#END SEND EMAIL
+
 
 # Application definition
 

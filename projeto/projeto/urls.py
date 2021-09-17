@@ -22,9 +22,22 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('sendemail/', send_email_api),
     url(r'^list/', listar_cadastros, name='listar_cadastros'),
     url(r'^cadastro/', cadastro_new, name='cadastro_new'),
     url(r'^sucesso/', sucesso, name='sucess_form'),
+
+    url(r'^/', index, name='index'),
+    url(r'^about/', about, name='about'),
+    url(r'^contact/', contact, name='contact'),
+    url(r'^missao/', missao, name='missao'),
+    url(r'^membrosfundadores/', membros_fundadores, name='membros_fundadores'),
+    url(r'^organograma/', organograma, name='organograma'),
+    url(r'^regulamento/', regulamento, name='regulamento'),
+    url(r'^valores/', valores, name='valores'),
+    url(r'^vantagens/', vantagens, name='vantagens'),
+    url(r'^visao/', visao, name='visao'),
+
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

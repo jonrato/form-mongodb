@@ -37,129 +37,142 @@
     <body>
         
         
-    <div class="col-12">
-        <form method="post" enctype="multipart/form-data" class="col-12">
+    <div class="col-12" style="width: 100%;"> 
+        <form method="post" enctype="multipart/form-data" class="col-12" style="text-decoration-color: none;">
             {% csrf_token %}
-            <section>
+            <section style="width:100%;">
                 <h2>Dados do Trabalho</h2>
-            <div class="form-group" >
+            <div class="form-group w-100 "  >
                 {{form.titulo_trabalho|as_crispy_field}}
             </div>
-            <div class="form-group">
+            <div class="form-group" >
                 {{form.areas_intervencao|as_crispy_field}}
             </div>
-            <div class="row">
-                <div class="form-group">
+            <div class="row ">
+                <div class="form-group col-5">
                     {{form.prof_coordenador|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.email_prof_coordenador|as_crispy_field}}
                 </div>
                 
             </div>
-            <div class="form-group">
+            <div class="form-group col-10">
+                <p>Nr. de Participantes</p>
                 {{form.n_participantes}}
             </div>
-            <div class="row">
-                <div class="form-group">
+            <div class="row offset-1">
+                <div class="form-group col-4">
                     {{form.desc_det_proj|as_crispy_field}}
+                    <small>.pdf|.doc|.docx||até 5Mb</small>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-4">
                     {{form.anexos|as_crispy_field}}
+                    <small>.zip|.rar||até 10Mb</small>
                 </div>
-                <div class="form-group">
+                <div class="form-group col-4">
                     {{form.resumo_uma_pagina|as_crispy_field}}
+                    <small>.pdf|doc|.docx||até 512Kb</small>
                 </div>
             </div>
             <div class="form-group">
-                {{form.resumo_uma_pagina|as_crispy_field}}
+                {{form.resumo_trabalho|as_crispy_field}}
             </div>
         </section>
 
         <section>
             <h2>Dados do Candidato</h2>
             <div class="form-group">
-                {{form.nome|as_crispy_field}}
+                <small>{{form.nome|as_crispy_field}}</small>
             </div>
             <div class="form-group">
                 {{form.fotografia_passe|as_crispy_field}}
+                .gif|.jpg|.jpeg|.png||até 1Mb
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5">
                     {{form.morada_completa|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.cod_postal|as_crispy_field}}
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5">
                     {{form.localidade|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.sexo|as_crispy_field}}
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5">
                     {{form.nascimento|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.n_cartao_cidadao|as_crispy_field}}
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5">
                     {{form.n_id_fiscal|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.telefone|as_crispy_field}}
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5">
                     {{form.telemovel|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.email|as_crispy_field}}
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5">
                     {{form.escola_frequenta|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.pais|as_crispy_field}}
                 </div>
             </div>
             <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5">
                     {{form.distrito_escola|as_crispy_field}}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
+                    {{form.localidade_escola|as_crispy_field}}
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="form-group col-5">
                     {{form.ano_frequenta|as_crispy_field}}
                 </div>
-            </div>
-            <div class="row">
-                <div class="form-group">
+                <div class="form-group col-5 offset-1">
                     {{form.carreira_seguir|as_crispy_field}}
                 </div>
-                <div class="form-group">
-                    {{form.passatempo|as_crispy_field}}
-                </div>
+                
             </div>
             <div class="row">
-                <div class="form-group">
-                    {{form.telemovel|as_crispy_field}}
+                <div class="form-group col-5">
+                    {{form.passatempo|as_crispy_field}}
                 </div>
-                <div class="form-group">
-                    {{form.email|as_crispy_field}}
+                <div class="form-group col-5 offset-1">
+                    {{form.termos_privacidade|as_crispy_field}}
                 </div>
             </div>
+            
         </section>
-            <button type="submit" class="btn btn-primary">
+
+        
+            <button type="submit" class="btn btn-dark" style="position:relative;
+            
+            left:40%;">
                 Submeter a candidatura
             </button>
+        
         </form>
     </div>
 
@@ -249,9 +262,9 @@ Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                     <div class="footer-border">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-10 col-lg-9 ">
-                                <div class="footer-copy-right">
+                                <div class="footer-copy-right text-center">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Este um site modelo  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://muximatic.com" target="_blank">Muximatic</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Jonatas Ferreira
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>
