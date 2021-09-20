@@ -40,14 +40,14 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="{% static 'assets/img/logo/loder.png' %}" alt="">
                 </div>
             </div>
         </div>
     </div>
     <!-- Preloader Start -->
     <header>
-         <!-- Header Start -->
+        <!-- Header Start -->
         <div class="header-area">
             <div class="main-header ">
                 <div class="header-top d-none d-lg-block">
@@ -94,7 +94,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -103,28 +103,31 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">INÍCIO</a></li>
-                                                <li><a href="about.html">QUEM SOMOS</a>
+                                                <li><a href="{% url 'index' %}">INÍCIO</a></li>
+                                                <li><a href="{% url 'about' %}">QUEM SOMOS</a>
                                                     <ul class="submenu">
                                                                      
-                    <li><a href="Organigrama.html">ORGANIGRAMA</a></li>
-                  <li><a href="membrosfundadores.html">MEMBROS FUNDADORES</a></li>
-                  <li><a href="#">MISSÃO</a></li>
-                  <li><a href="#">VALORES</a></li>
-                  <li><a href="#">VANTAGENS DE PERTENCER À P.D.P.T</a></li>
+                    <li><a href="{% url 'organograma' %}">ORGANIGRAMA</a></li>
+                  <li><a href="{% url 'membros_fundadores' %}">MEMBROS FUNDADORES</a></li>
+                  <li><a href="{% url 'missao' %}">MISSÃO</a></li>
+                  <li><a href="{% url 'visao' %}">VISÃO</a></li>
+                  <li><a href="{% url 'valores' %}">VALORES</a></li>
+                  <li><a href="{% url 'vantagens' %}">VANTAGENS DE PERTENCER À P.D.P.T</a></li>
                                                     </ul>
                                                 </li>
                                                 
-                                                <li><a href="program.html">CAUSAS</a></li>
-                                                <li><a href="events.html">EVENTOS SOCIAIS </a></li>
-                                                <li><a href="blog.html">NOTÍCIASs</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Notícias</a></li>
-                                                        <li><a href="blog_details.html">Blog </a></li>
-                                                        <li><a href="elements.html">Element</a></li>
+                                                <li><a href="{% url 'galeria' %}">MULTIMÉDIA</a>
+                                                <ul class="submenu">
+                                                                     
+                    <li><a href="{% url 'galeria' %}">GALERIA DE FOTOS</a></li>
+                  
+                  
+                  </li>
                                                     </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contactos</a></li>
+                                                
+                                                
+                                                  
+                                                <li><a href="{% url 'contact' %}">CONTACTOS</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -165,7 +168,7 @@
  <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/team2.png" alt="">
+                            <img src="{% static 'assets/img/gallery/team2.png' %}" alt="">
                             <!-- Blog Social -->
                            
                         </div>
@@ -201,7 +204,7 @@
    <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/team3.png" alt="">
+                            <img src="{% static 'assets/img/gallery/team3.png' %}" alt="">
                             <!-- Blog Social -->
                            
                         </div>
@@ -231,7 +234,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/team1.png" alt="">
+                            <img src="{% static 'assets/img/gallery/team1.png' %}" alt="">
                             <!-- Blog Social -->
                           
                         </div>
@@ -254,7 +257,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/team4.png" alt="">
+                            <img src="{% static 'assets/img/gallery/team4.png' %}" alt="">
                             <!-- Blog Social -->
                            
                         </div>
@@ -276,7 +279,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/Pedras.png" alt="">
+                            <img src="{% static 'assets/img/gallery/Pedras.png' %}" alt="">
                             <!-- Blog Social -->
                            
                         </div>
@@ -300,7 +303,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/Dionisia.png" alt="">
+                            <img src="{% static 'assets/img/gallery/Dionisia.png' %}" alt="">
                             <!-- Blog Social -->
                            
                         </div>
@@ -326,7 +329,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-team mb-30">
                         <div class="team-img">
-                            <img src="assets/img/gallery/Carlos.png" alt="">
+                            <img src="{% static 'assets/img/gallery/Carlos.png' %}" alt="">
                             <!-- Blog Social -->
                          
                         </div>
@@ -376,8 +379,8 @@
 
     <!--? Count Down Start -->
     </main>
-    <footer>
-        <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
+    <footer style="background-color: #050A30;">
+        <div class="footer-wrapper section-bg2" data-background="{%static 'assets/img/gallery/footer_bg.png'%}">
             <!-- Footer Top-->
             <div class="footer-area footer-padding">
                 <div class="container">
@@ -387,7 +390,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                        <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -399,10 +402,11 @@
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <p>Address :Your address goes here, your demo address.</p>
+                                            <p>Endreço :Ingombotas, Ilha do Cabo, 
+Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                                         </li>
                                         <li><a href="#">Phone : +8880 44338899</a></li>
-                                        <li><a href="#">Email : info@colorlib.com</a></li>
+                                        <li><a href="#">Email : info@pdpt.com</a></li>
                                     </ul>
                                 </div>
 
@@ -411,13 +415,13 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Important Link</h4>
+                                    <h4>Links Importantes</h4>
                                     <ul>
-                                        <li><a href="#"> View Project</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Proparties</a></li>
-                                        <li><a href="#">Support</a></li>
+                                        <li><a href="#"> Acompanhar Projectos</a></li>
+                                        <li><a href="#">Contacte-nos</a></li>
+                                        <li><a href="#">Testemunho</a></li>
+                                        <li><a href="#">Quem somos</a></li>
+                                        <li><a href="#">Suporte</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -457,9 +461,9 @@
                     <div class="footer-border">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-10 col-lg-9 ">
-                                <div class="footer-copy-right">
+                                <div class="footer-copy-right text-center">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Jonatas Ferreira</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Jonatas Ferreira
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>

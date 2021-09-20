@@ -40,7 +40,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="{% static 'assets/img/logo/loder.png' %}" alt="">
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -103,31 +103,31 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">INÍCIO</a></li>
-                                                <li><a href="about.html">QUEM SOMOS</a>
+                                                <li><a href="{% url 'index' %}">INÍCIO</a></li>
+                                                <li><a href="{% url 'about' %}">QUEM SOMOS</a>
                                                     <ul class="submenu">
                                                                      
-                    <li><a href="Organigrama.html">ORGANIGRAMA</a></li>
-                  <li><a href="membrosfundadores.html">MEMBROS FUNDADORES</a></li>
-                  <li><a href="Missao.html">MISSÃO</a></li>
-                  <li><a href="Visao.html">VISÃO</a></li>
-                  <li><a href="Valores.html">VALORES</a></li>
-                  <li><a href="vantagens.html">VANTAGENS DE PERTENCER À P.D.P.T</a></li>
+                    <li><a href="{% url 'organograma' %}">ORGANIGRAMA</a></li>
+                  <li><a href="{% url 'membros_fundadores' %}">MEMBROS FUNDADORES</a></li>
+                  <li><a href="{% url 'missao' %}">MISSÃO</a></li>
+                  <li><a href="{% url 'visao' %}">VISÃO</a></li>
+                  <li><a href="{% url 'valores' %}">VALORES</a></li>
+                  <li><a href="{% url 'vantagens' %}">VANTAGENS DE PERTENCER À P.D.P.T</a></li>
                                                     </ul>
                                                 </li>
                                                 
-                                                <li><a href="program.html">MULTIMÉDIA</a>
+                                                <li><a href="{% url 'galeria' %}">MULTIMÉDIA</a>
                                                 <ul class="submenu">
                                                                      
-                    <li><a href="Organigrama.html">GALERIA DE FOTOS</a></li>
-                  <li><a href="membrosfundadores.html">BROCHURAS</a></li>
-                  <li><a href="Missao.html">VÍDEOS</a></li>
+                    <li><a href="{% url 'galeria' %}">GALERIA DE FOTOS</a></li>
+                  
+                  
                   </li>
                                                     </ul>
-                                                <li><a href="events.html">NOTÍCIAS </a></li>
-                                                <li><a href="blog.html">JUNTE-SE A NÓS</a>
+                                                
+                                                
                                                   
-                                                <li><a href="contact.html">CONTACTOS</a></li>
+                                                <li><a href="{% url 'contact' %}">CONTACTOS</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -151,10 +151,10 @@
     <!-- header end -->
     <main>
     <!-- slider Area Start-->
-    <div class="slider-area">
+    <div class="slider-area" style="width:100%;height:10%">
         <div class="slider-active">
             <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center">
+            <div class="single-slider  d-flex align-items-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
@@ -163,11 +163,11 @@
                                 <!-- Hero-btn -->
                                 
                                 <button type="button" class="btn btn-success" style="margin-right:4rem">
-                                        <a href="regulamento.html">Regulamento</a>
+                                        <a href="{% url 'regulamento' %}">Regulamento</a>
                                     </button>
 
                                     <button type="button" class="btn btn-success">
-                                        <a href="html-mongo/form-concurso.html">Inscrição</a>
+                                        <a href="{% url 'cadastro_new' %}">Inscrição</a>
                                     </button>
                             </div>
                         </div>
@@ -175,21 +175,15 @@
                 </div>
             </div>
             <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center">
+            <div class="single-slider  d-flex align-items-center" style="margin-top: 0px;">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
                             <div class="hero__caption">
                                 <h1 data-animation="fadeInUp" data-delay=".6s">Vamos mudar o mundo com a <br> humanidade.</h1>
-                                <P data-animation="fadeInUp" data-delay=".8s" >Onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut bore et dolore magnt, sed do eiusmod.</P>
+                                
                                 <!-- Hero-btn -->
-                                <div class="hero__btn">
-                                    <a href="industries.html" class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donativos</a>
-                                    <a href="industries.html" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
-                                        <i class="flaticon-null"></i>
-                                        <p>+12 1325 41</p>
-                                    </a>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -217,8 +211,8 @@
                             <span class="flaticon-null-1"></span>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Visão</a></h5>
-                            <p>The sea freight service has grown conside rably in recent years. We spend timetting to know your processes to.</p>
+                            <h5><a href="{% url 'visao' %}">Visão</a></h5>
+                            
                         </div>
                     </div>
                 </div>
@@ -228,7 +222,7 @@
                             <span class="flaticon-think"></span>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Missão</a></h5>
+                            <h5><a href="{% url 'missao' %}">Missão</a></h5>
                             <p>A  Associação PDPT  apoia  e  promove  crianças  e  jovens  mentores  e  promotores  de  projectos inovadores, a.</p>
                         </div>
                     </div>
@@ -239,8 +233,8 @@
                             <span class="flaticon-gear"></span>
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Valores</a></h5>
-                            <p>The sea freight service has grown conside rably in recent years. We spend timetting to know your processes to.</p>
+                            <h5><a href="{% url 'valores' %}">Valores</a></h5>
+                            
                         </div>
                     </div>
                 </div>
@@ -262,16 +256,16 @@
                         <p>A Associação PDPT pretende preparar crianças e jovens para terem sucesso numa economia global através do intercâmbio de experiências, aproximando as instituições de ensino do mundo empresarial, nacional e internacional, estimulando o desenvolvimento de uma cultura de responsabilidade individual..</p>
                         <p>Lorem ipvsum dolor sit amext, consectetur adipisicing elit, smod tempor incididunt ut labore et dolore.</p>
                     </div>
-                    <a href="about.html" class="btn">Saiba mais...</a>
+                    <a href="{% url 'contact' %}" class="btn">Saiba mais...</a>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <!-- about-img -->
                     <div class="about-img ">
                         <div class="about-font-img d-none d-lg-block">
-                            <img src="assets/img/gallery/about2.png" alt="">
+                            <img src="{% static 'assets/img/gallery/about2.png' %}" alt="">
                         </div>
                         <div class="about-back-img ">
-                            <img src="assets/img/gallery/about1.png" alt="">
+                            <img src="{% static 'assets/img/gallery/about1.png' %}" alt="">
                         </div>
                     </div>
                 </div>
@@ -295,7 +289,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-cases mb-40">
                         <div class="cases-img">
-                            <img src="assets/img/gallery/case1.png" alt="">
+                            <img src="{% static 'assets/img/gallery/case1.png' %}" alt="">
                         </div>
                         <div class="cases-caption">
                             <h3><a href="#"> Talent  Search Empreendedores - Empresas</a></h3>
@@ -311,17 +305,14 @@
                                 </div>
                             </div>
                             <!-- / progress -->
-                            <div class="prices d-flex justify-content-between">
-                                <p>Raised:<span> $20,000</span></p>
-                                <p>Goal:<span> $35,000</span></p>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-cases mb-40">
                         <div class="cases-img">
-                            <img src="assets/img/gallery/case2.png" alt="">
+                            <img src="{% static 'assets/img/gallery/case2.png' %}" alt="">
                         </div>
                         <div class="cases-caption">
                             <h3><a href="#">Talent Search - Talentos.</a></h3>
@@ -337,17 +328,14 @@
                                 </div>
                             </div>
                             <!-- / progress -->
-                            <div class="prices d-flex justify-content-between">
-                                <p>Raised:<span> $20,000</span></p>
-                                <p>Goal:<span> $35,000</span></p>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-cases mb-40">
                         <div class="cases-img">
-                            <img src="assets/img/gallery/case3.png" alt="">
+                            <img src="{% static 'assets/img/gallery/case3.png' %}" alt="">
                         </div>
                         <div class="cases-caption">
                             <h3><a href="#">Talent Search - Tecnologia</a></h3>
@@ -363,10 +351,7 @@
                                 </div>
                             </div>
                             <!-- / progress -->
-                            <div class="prices d-flex justify-content-between">
-                                <p>Raised:<span> $20,000</span></p>
-                                <p>Goal:<span> $35,000</span></p>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -396,7 +381,7 @@
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
-                                <img src="assets/img/gallery/home-blog1.png" alt="">
+                                <img src="{% static 'assets/img/gallery/home-blog1.png' %}" alt="">
                                 <!-- Blog date -->
                                 <div class="blog-date text-center">
                                     <span>06</span>
@@ -414,7 +399,7 @@
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
-                                <img src="assets/img/gallery/home-blog2.png" alt="">
+                                <img src="{% static 'assets/img/gallery/home-blog2.png' %}" alt="">
                                 <!-- Blog date -->
                                 <div class="blog-date text-center">
                                     <span>09</span>
@@ -480,8 +465,8 @@
     <!-- Count Down End -->
 
     </main>
-    <footer>
-        <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
+    <footer style="background-color: #050A30;">
+        <div class="footer-wrapper section-bg2" data-background="{%static 'assets/img/gallery/footer_bg.png'%}">
             <!-- Footer Top-->
             <div class="footer-area footer-padding">
                 <div class="container">
@@ -491,7 +476,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                        <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -562,9 +547,9 @@ Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                     <div class="footer-border">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-10 col-lg-9 ">
-                                <div class="footer-copy-right">
+                                <div class="footer-copy-right text-center">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Este um site modelo  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://muximatic.com" target="_blank">Muximatic</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Jonatas Ferreira
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>

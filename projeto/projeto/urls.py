@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^about/', about, name='about'),
     url(r'^contact/', contact, name='contact'),
+    url(r'^galeria/', galeria, name='galeria'),
     url(r'^missao/', missao, name='missao'),
     url(r'^membrosfundadores/', membros_fundadores, name='membros_fundadores'),
     url(r'^organograma/', organograma, name='organograma'),

@@ -1,4 +1,4 @@
-{% load static %}
+{%load static%}
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
@@ -33,13 +33,14 @@
   integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <meta charset="UTF-8">
 </head>
-    <!--? Preloader Start -->
+<body>
+    <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="{% static 'assets/img/logo/loder.png' %}" alt="">
                 </div>
             </div>
         </div>
@@ -55,8 +56,8 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left d-flex">
                                     <ul>     
-                                        <li>Phone: +99 (0) 101 0000 888</li>
-                                        <li>Email: noreply@yourdomain.com</li>
+                                         <li>Telefone: 923415560 </li>
+                                        <li>Email: info@pdpt.org</li>
                                     </ul>
                                     <div class="header-social">    
                                         <ul>
@@ -72,16 +73,15 @@
                                         <form action="#">
                                             <div class="select-itms">
                                                 <select name="select" id="select1">
+                                        <option value="">Portugues</option>
                                                     <option value="">English</option>
-                                                    <option value="">Bangla</option>
-                                                    <option value="">Arabic</option>
-                                                    <option value="">Hindi</option>
+                                                    <option value="">Espanhol</option>
                                                 </select>
                                             </div>
                                         </form>
                                     </div>
                                     <ul class="contact-now">     
-                                        <li><a href="#">Subscribe Now</a></li>
+                                        <li><a href="#">Assine Agora</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo.png' %}" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -103,24 +103,37 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="program.html">latest causes</a></li>
-                                                <li><a href="events.html">social events </a></li>
-                                                <li><a href="blog.html">Blog</a>
+                                                <li><a href="{% url 'index' %}">INÍCIO</a></li>
+                                                <li><a href="{% url 'about' %}">QUEM SOMOS</a>
                                                     <ul class="submenu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="elements.html">Element</a></li>
+                                                                     
+                    <li><a href="{% url 'organograma' %}">ORGANIGRAMA</a></li>
+                  <li><a href="{% url 'membros_fundadores' %}">MEMBROS FUNDADORES</a></li>
+                  <li><a href="{% url 'missao' %}">MISSÃO</a></li>
+                  <li><a href="{% url 'visao' %}">VISÃO</a></li>
+                  <li><a href="{% url 'valores' %}">VALORES</a></li>
+                  <li><a href="{% url 'vantagens' %}">VANTAGENS DE PERTENCER À P.D.P.T</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                
+                                                <li><a href="{% url 'galeria' %}">MULTIMÉDIA</a>
+                                                <ul class="submenu">
+                                                                     
+                    <li><a href="{% url 'galeria' %}">GALERIA DE FOTOS</a></li>
+                  
+                  
+                  </li>
+                                                    </ul>
+                                                
+                                                
+                                                  
+                                                <li><a href="{% url 'contact' %}">CONTACTOS</a></li>
                                             </ul>
                                         </nav>
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <a href="contact.html" class="btn header-btn">Donativos</a>
                                     </div>
                                 </div>
                             </div> 
@@ -135,9 +148,10 @@
         </div>
         <!-- Header End -->
     </header>
+    <!-- header end -->
     <main>
         <!--? Hero Start -->
-        <div class="slider-area2">
+        <div class="slider-area2" style="margin-bottom: 20rem;">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
                     <div class="row">
@@ -155,8 +169,8 @@
         <!-- Hero End -->
         
     </main>
-    <footer>
-        <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
+    <footer style="background-color: #050A30;">
+        <div class="footer-wrapper section-bg2" data-background="{%static 'assets/img/gallery/footer_bg.png'%}">
             <!-- Footer Top-->
             <div class="footer-area footer-padding">
                 <div class="container">
@@ -166,7 +180,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                        <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -178,10 +192,11 @@
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <p>Address :Your address goes here, your demo address.</p>
+                                            <p>Endreço :Ingombotas, Ilha do Cabo, 
+Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                                         </li>
                                         <li><a href="#">Phone : +8880 44338899</a></li>
-                                        <li><a href="#">Email : info@colorlib.com</a></li>
+                                        <li><a href="#">Email : info@pdpt.com</a></li>
                                     </ul>
                                 </div>
 
@@ -190,13 +205,13 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Important Link</h4>
+                                    <h4>Links Importantes</h4>
                                     <ul>
-                                        <li><a href="#"> View Project</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Proparties</a></li>
-                                        <li><a href="#">Support</a></li>
+                                        <li><a href="#"> Acompanhar Projectos</a></li>
+                                        <li><a href="#">Contacte-nos</a></li>
+                                        <li><a href="#">Testemunho</a></li>
+                                        <li><a href="#">Quem somos</a></li>
+                                        <li><a href="#">Suporte</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -236,9 +251,9 @@
                     <div class="footer-border">
                         <div class="row d-flex justify-content-between align-items-center">
                             <div class="col-xl-10 col-lg-9 ">
-                                <div class="footer-copy-right">
+                                <div class="footer-copy-right text-center">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Jonatas Ferreira</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Jonatas Ferreira
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>

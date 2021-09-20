@@ -3518,7 +3518,7 @@ hr {
 .slider-area {
   background-image: url(../img/hero/h1_hero_v2.jpg);
   max-width: 100%;
-  height: auto;
+  height: 10%;
   background-repeat: no-repeat;
   
   background-size: cover;
@@ -3532,7 +3532,7 @@ hr {
   color: #002d5b;
   line-height: 1.2;
   text-transform: capitalize;
-  margin-bottom: 29px;
+  
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

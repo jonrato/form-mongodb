@@ -89,6 +89,11 @@ def contact(request, template_name='contact.html'):
     return render(request, template_name)
 #END Contact
 
+#Galeria
+def galeria(request, template_name='galeria.html'):
+    return render(request, template_name)
+#END Galeria
+
 #Membros Fundadores
 def membros_fundadores(request, template_name='membrosfundadores.html'):
     
