@@ -496,7 +496,7 @@ hr {
 
 /* line 245, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_common.scss */
 .btn {
-  background: #483D8B;
+  background-color: #483D8B!important;
   font-family: "Muli", sans-serif;
   text-transform: capitalize;
   padding: 27px 44px;
@@ -529,7 +529,7 @@ hr {
   top: 0;
   width: 101%;
   height: 101%;
-  background: #24ac75;
+  background: #483D8B;
   z-index: 1;
   border-radius: 5px;
   transition: transform 0.5s;

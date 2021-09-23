@@ -136,3 +136,15 @@ def visao(request, template_name='Visao.html'):
     
     return render(request, template_name)
 #END Visão
+
+#Blog Detail 1
+def blog_1(request, template_name='blog_detail1.html'):
+
+    return render(request, template_name)
+#END Blog Detail 1
+
+#Blog Detail 2
+def blog_2(request, template_name='blog_detail2.html'):
+
+    return render(request, template_name)
+#END Blog Detail 2

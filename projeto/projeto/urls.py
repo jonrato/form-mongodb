@@ -38,6 +38,8 @@ urlpatterns = [
     url(r'^valores/', valores, name='valores'),
     url(r'^vantagens/', vantagens, name='vantagens'),
     url(r'^visao/', visao, name='visao'),
+    url(r'^detail1/', blog_1, name='blog1'),
+    url(r'^detail2/', blog_2, name='blog2')
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 if settings.DEBUG:
