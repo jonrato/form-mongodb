@@ -7,6 +7,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.forms import ModelForm, TextInput, EmailInput
 
 
+
 class cadastrosForm(ModelForm):
     class Meta:
         model = cadastro
@@ -18,6 +19,8 @@ class cadastrosForm(ModelForm):
             'localidade_escola',
             'ano_frequenta','carreira_seguir','passatempo','termos_privacidade'
         ]
+    
+        
 
 
 def listar_cadastros(request):
@@ -26,13 +29,20 @@ def listar_cadastros(request):
     return render(request, 'list.html', cadastros)
 
 def cadastro_new(request,template_name='cadastro_form.html'):
-    form = cadastrosForm(request.POST, request.FILES or None)
+    
+    form = cadastrosForm(request.POST , request.FILES)
+    
+    
+
     if form.is_valid():
+
         form.save()
         nome = form.data['nome']
         email = form.data['email']
         send_email_api(request, nome,email)
         return redirect('sucess_form')
+    else:
+        form = cadastrosForm(request.POST , request.FILES)
     return render(request,template_name, {'form':form})
 
 def sucesso(request, template_name='sucesso.html'):

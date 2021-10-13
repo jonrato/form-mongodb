@@ -8314,3 +8314,7 @@ del {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.form-control{
+  text-decoration: none;
+}

@@ -6,7 +6,7 @@
         
             <meta charset="utf-8">
             <meta http-equiv="x-ua-compatible" content="ie=edge">
-            <title> P.D.P.T Demo</title>
+            <title> P.D.P.T Angola</title>
             <meta name="description" content="">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="manifest" href="site.webmanifest">
@@ -38,12 +38,13 @@
         
         
     <div class="col-12" style="width: 100%;"> 
-        <form method="post" enctype="multipart/form-data" class="col-12" style="text-decoration-color: none;">
+        <form method="post" enctype="multipart/form-data" class="col-12" style="text-decoration: none;">
+            <input type="hidden">
             {% csrf_token %}
             <section style="width:100%;">
                 <h2>Dados do Trabalho</h2>
             <div class="form-group w-100 "  >
-                {{form.titulo_trabalho|as_crispy_field}}
+              {{form.titulo_trabalho|as_crispy_field}}
             </div>
             <div class="form-group" >
                 {{form.areas_intervencao|as_crispy_field}}
@@ -58,8 +59,8 @@
                 
             </div>
             <div class="form-group col-10">
-                <p>Nr. de Participantes</p>
-                {{form.n_participantes}}
+                
+                {{form.n_participantes|as_crispy_field}}
             </div>
             <div class="row offset-1">
                 <div class="form-group col-4">
@@ -179,9 +180,57 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- JS here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+    <script src="{% static '/assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="{% static '/assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static '/assets/js/popper.min.js' %}"></script>
+    <script src="{% static '/assets/js/bootstrap.min.js' %}"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="{% static '/assets/js/jquery.slicknav.min.js' %}"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="{% static '/assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static '/assets/js/slick.min.js' %"}></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="{% static '/assets/js/wow.min.js' %}"></script>
+    <script src="{% static '/assets/js/animated.headline.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.magnific-popup.js' %}"></script>
+
+    <!-- Date Picker -->
+    <script src="{% static '/assets/js/gijgo.min.js' %}"></script>
+    <!-- Nice-select, sticky -->
+    <script src="{% static '/assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.sticky.js' %}"></script>
+    <!-- Progress -->
+    <script src="{% static '/assets/js/jquery.barfiller.js' %}"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="{% static '/assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static '/assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static '/assets/js/hover-direction-snake.min.js' %}"></script>
+
+    <!-- contact js -->
+    <script src="{% static '/assets/js/contact.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.form.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static '/assets/js/mail-script.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->    
+    <script src="{% static '/assets/js/plugins.js' %}"></script>
+    <script src="{% static '/assets/js/main.js' %}"></script>
     </body>
     <footer style="background-color: #050A30;">
-        <div class="footer-wrapper section-bg2" data-background="{%static 'assets/img/gallery/footer_bg.png'%}">
+        <div class="footer-wrapper section-bg2" data-background="../assets/img/gallery/footer_bg.png">
             <!-- Footer Top-->
             <div class="footer-area footer-padding">
                 <div class="container">
@@ -191,7 +240,7 @@
                             <div class="single-footer-caption mb-30">
                                 <div class="footer-tittle">
                                     <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt=""></a>
+                                        <a href="index.html"><img src="../assets/img/logo/logo2_footer.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -200,13 +249,13 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Contact Info</h4>
+                                    <h4>Contacto</h4>
                                     <ul>
                                         <li>
                                             <p>Endreço :Ingombotas, Ilha do Cabo, 
 Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                                         </li>
-                                        <li><a href="#">Phone : +8880 44338899</a></li>
+                                        <li><a href="#">Phone : 923 415 560 | 227 280 516</a></li>
                                         <li><a href="#">Email : info@pdpt.com</a></li>
                                     </ul>
                                 </div>
@@ -230,9 +279,6 @@ Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Newsletter</h4>
-                                    <div class="footer-pera footer-pera2">
-                                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
                                 </div>
                                 <!-- Form -->
                                 <div class="footer-form" >
@@ -256,30 +302,30 @@ Rua Mortala  Mohamed, Largo do Pescador, Nº 8 Luanda - Angola.</p>
                     </div>
                 </div>
             </div>
-            <!-- footer-bottom -->
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex justify-content-between align-items-center">
-                            <div class="col-xl-10 col-lg-9 ">
-                                <div class="footer-copy-right text-center">
-                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Jonatas Ferreira
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                                </div>
+           <!-- footer-bottom -->
+           <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-10 col-lg-9 ">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos Direitos Reservados  | Este um site modelo  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://muximatic.com" target="_blank">Muximatic</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
-                            <div class="col-xl-2 col-lg-3">
-                                <div class="footer-social f-right">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3">
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 </html>

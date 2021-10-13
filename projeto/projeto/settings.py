@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_countries',
     'bootstrap3',
-    'crispy_forms',
+    'crispy_forms'
 
 ]
 
@@ -148,3 +148,5 @@ STATICFILES_DIRS = (
 
 
 django_heroku.settings(locals())
+
+

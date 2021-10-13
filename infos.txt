@@ -1,0 +1,11 @@
+account Google:
+	workdevangola@gmail.com
+	3008_angola_3008
+
+Admin Django
+username: admin@dev
+password: dev_admin_dev
+
+Admin Django Prod.
+	username: admin@pdpt
+	password: dev_admin_dev
